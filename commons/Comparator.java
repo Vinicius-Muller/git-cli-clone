@@ -11,9 +11,9 @@ import java.util.List;
 import java.util.Set;
 
 public class Comparator {
-  public void startComparation() {
-    Path original = Paths.get("./index.html");
-    Path copyToCompare = Paths.get("./about.html"); 
+  public void startComparation(String origin, String compare) {
+    Path original = Paths.get(origin);
+    Path copyToCompare = Paths.get(compare); 
     File diffFile = new File("./head/diff.txt");
 
     try (FileWriter writer = new FileWriter(diffFile)) {
